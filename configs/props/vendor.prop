@@ -157,7 +157,6 @@ vendor.display.camera_noc_efficiency_factor=0.70
 vendor.display.comp_mask=0
 vendor.display.disable_excl_rect=0
 vendor.display.disable_excl_rect_partial_fb=1
-vendor.display.disable_hw_recovery_dump=1
 vendor.display.disable_idle_time_hdr=1
 vendor.display.disable_idle_time_video=1
 vendor.display.disable_layer_stitch=0
@@ -178,7 +177,6 @@ vendor.display.qdcm.disable_factory_mode=1
 vendor.display.qdcm.mode_combine=1
 vendor.display.secure_preview_buffer_format=420_sp
 vendor.display.use_layer_ext=0
-vendor.display.use_smooth_motion=0
 
 # Display calib
 ro.vendor.display.sensortype=2
@@ -219,6 +217,7 @@ persist.sys.sf.color_saturation=1.0
 ro.config.avoid_gfx_accel=true
 ro.surface_flinger.protected_contents=true
 ro.hardware.egl=adreno
+vendor.display.use_smooth_motion=1
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
 vendor.display.comp_mask=0
