@@ -245,6 +245,9 @@ PRODUCT_PACKAGES += \
 # GrapheneCamera
 PRODUCT_PACKAGES += \
     GrapheneCamera
+    
+# HWUI
+HWUI_COMPILE_FOR_PERF := true
 
 # Health
 PRODUCT_PACKAGES += \
