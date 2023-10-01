@@ -474,6 +474,10 @@ on property:persist.vendor.radio.atfwd.start=false
 on property:vendor.radio.atfwd.start=false
     stop vendor.atfwd
 
+# Restrict permissions to socket file 
+    # to hide Magisk & co.
+    chmod 440 /proc/net/unix
+
 on property:vendor.media.target.version=*
     setprop vendor.sys.media.target.version ${vendor.media.target.version}
 
