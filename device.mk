@@ -367,6 +367,10 @@ PRODUCT_PACKAGES += \
     TetheringOverlay \
     WifiResCommon 
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # For framework-res__auto_generated_rro_vendor.apk
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS := # leave it empty
