@@ -248,6 +248,10 @@ PRODUCT_PACKAGES += \
 # HWUI
 HWUI_COMPILE_FOR_PERF := true
 
+# GrapheneCamera
+PRODUCT_PACKAGES += \
+    GrapheneCamera
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
