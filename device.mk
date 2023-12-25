@@ -239,6 +239,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
 
+# GrapheneCamera
+PRODUCT_PACKAGES += \
+    GrapheneCamera
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
