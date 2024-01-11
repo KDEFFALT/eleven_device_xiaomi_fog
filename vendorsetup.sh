@@ -24,7 +24,11 @@ git clone https://github.com/KDEFFALT/kernel_xiaomi_fog -b artifact-new kernel/x
 # Vendor Sources
 git clone https://github.com/KDEFFALT/vendor_xiaomi_fog -b eleven vendor/xiaomi/fog
 
-# fixup 
+# fixup
+sudo rm -rf packages/services/Telecomm
+git clone https://github.com/KDEFFALT/packages_services_Telecomm -b eleven-xdcaf packages/services/Telecomm
+
+# Doubel definition
 sudo mv packages/apps/Dialer/Android.mk packages/apps/Dialer/Androidmk
 
 echo -e "${color}Finished sync!${end}"
