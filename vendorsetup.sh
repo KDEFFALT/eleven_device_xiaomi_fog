@@ -18,6 +18,9 @@ git clone https://github.com/LineageOS/android_hardware_xiaomi -b lineage-18.1 h
 # Remove megvii libs on hardware/xiaomi to avoid conflicts
 rm -rf hardware/xiaomi/megvii
 
+# Kernel Sources
+git clone https://github.com/KDEFFALT/kernel_xiaomi_fog -b artifact-new kernel/xiaomi/fog
+
 # Vendor Sources
 git clone https://github.com/KDEFFALT/vendor_xiaomi_fog -b eleven vendor/xiaomi/fog
 
