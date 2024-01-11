@@ -21,4 +21,7 @@ rm -rf hardware/xiaomi/megvii
 # Vendor Sources
 git clone https://github.com/KDEFFALT/vendor_xiaomi_fog -b eleven vendor/xiaomi/fog
 
+# fixup 
+sudo mv packages/apps/Dialer/Android.mk packages/apps/Dialer/Androidmk
+
 echo -e "${color}Finished sync!${end}"
