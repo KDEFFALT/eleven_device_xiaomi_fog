@@ -26,7 +26,9 @@ git clone https://github.com/KDEFFALT/vendor_xiaomi_fog -b eleven vendor/xiaomi/
 
 # fixup
 sudo rm -rf packages/services/Telecomm
+sudo rm -rf packages/apps/ManagedProvisioning
 git clone https://github.com/KDEFFALT/packages_services_Telecomm -b eleven-xdcaf packages/services/Telecomm
+git clone https://github.com/KDEFFALT/packages_apps_ManagedProvisioning -b eleven packages/apps/ManagedProvisioning
 
 # Doubel definition
 sudo mv packages/apps/Dialer/Android.mk packages/apps/Dialer/Androidmk
