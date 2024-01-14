@@ -18,4 +18,7 @@ git clone https://github.com/KDEFFALT/kernel_xiaomi_fog -b artifact-new kernel/x
 # Vendor Sources
 git clone https://github.com/KDEFFALT/vendor_xiaomi_fog -b eleven vendor/xiaomi/fog
 
+# Proton clang
+git clone --depth=1 https://github.com/kdrag0n/proton-clang prebuilts/clang/host/linux-x86/clang-proton
+
 echo -e "${color}Finished sync!${end}"
