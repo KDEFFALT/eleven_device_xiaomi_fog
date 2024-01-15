@@ -41,6 +41,9 @@ PRODUCT_PACKAGES += \
 # API Level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# APN
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
+
 # ART Debugging (Disable)
 USE_DEX2OAT_DEBUG := false
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
