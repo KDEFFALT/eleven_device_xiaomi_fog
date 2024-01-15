@@ -30,8 +30,4 @@ sudo rm -rf vendor/google/pixel
 sudo rm -rf vendor/xdroid
 git clone https://github.com/KDEFFALT/xd_vendor_xdroid -b eleven vendor/xdroid
 
-# Dialer
-sudo rm -rf vendor/codeaurora/commonsys/packages/apps/Dialer
-git clone https://github.com/KDEFFALT/android_packages_apps_Dialer -b los18.1-clo packages/apps/Dialer
-
 echo -e "${color}Finished sync!${end}"
