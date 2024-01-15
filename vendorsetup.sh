@@ -24,4 +24,10 @@ git clone https://github.com/KDEFFALT/vendor_xiaomi_fog -b eleven vendor/xiaomi/
 # Proton clang
 git clone --depth=1 https://github.com/kdrag0n/proton-clang prebuilts/clang/host/linux-x86/clang-proton
 
+# Vanillaify
+
+# Dialer
+sudo rm -rf vendor/codeaurora/commonsys/packages/apps/Dialer
+git clone https://github.com/KDEFFALT/android_packages_apps_Dialer -b los18.1-clo packages/apps/Dialer
+
 echo -e "${color}Finished sync!${end}"
