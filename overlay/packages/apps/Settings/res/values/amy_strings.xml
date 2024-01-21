@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- amyROM Device Maintainer -->
+    <string name="amyrom_maintainer">Jackie</string>
+
+    <!-- amyROM Device Info -->
+    <string name="amy_device_platform_summary">sm6225</string>
+    <string name="amy_chipset_type_summary">Qualcomm Snapdragon 680</string>
+    <string name="amy_gpu_summary">Aderno 610</string>
+    <string name="amy_camera_mp_summary">50MP+2MP Dual Camera</string>
+    <string name="amy_screen_type_summary">IPS LCD HD+ 6.71" Screen</string>
+</resources>

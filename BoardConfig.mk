@@ -80,16 +80,13 @@ TARGET_USES_ION := true
 
 TARGET_USES_AOSP_SURFACEFLINGER := true
 
-# DTBO image
-BOARD_KERNEL_SEPARATED_DTBO := true
-
 # FM
 BOARD_HAVE_QCOM_FM := true
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    $(DEVICE_PATH)/configs/vintf/framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    $(DEVICE_PATH)/configs/vintf/framework_compatibility_matrix.xml
+
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/manifest.xml
 DEVICE_MATRIX_FILE += $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
 
@@ -114,7 +111,6 @@ BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 
 BOARD_KERNEL_CMDLINE += \
     androidboot.hardware=qcom \
@@ -128,11 +124,15 @@ BOARD_KERNEL_CMDLINE += \
 
 BOARD_KERNEL_CMDLINE += androidboot.fstab_suffix=qcom
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
-TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CONFIG := vendor/bengal_defconfig
 TARGET_KERNEL_HEADERS := kernel/xiaomi/fog
 TARGET_KERNEL_SOURCE := kernel/xiaomi/fog
+TARGET_LINUX_KERNEL_VERSION := 4.19
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_VERSION := 4.19
+TARGET_KERNEL_CLANG_VERSION := clang-proton
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/$(TARGET_KERNEL_CLANG_VERSION)
 
 # Media
 TARGET_DISABLED_UBWC := true
@@ -187,6 +187,24 @@ TARGET_OTA_ASSERT_DEVICE := fog,rain,wind
 # Platform
 BOARD_VENDOR := xiaomi
 TARGET_BOARD_PLATFORM := bengal
+
+# Soong Override
+OVERRIDE_QCOM_HARDWARE_VARIANT := bengal
+QCOM_SOONG_NAMESPACE := hardware/qcom-caf/bengal
+TARGET_HALS_PATH ?= $(QCOM_SOONG_NAMESPACE)
+TARGET_USES_CUSTOM_DISPLAY_INTERFACE := true
+
+# Audio
+USE_DEVICE_SPECIFIC_AUDIO := true
+DEVICE_SPECIFIC_AUDIO_PATH := $(TARGET_HALS_PATH)/audio
+
+# Display
+USE_DEVICE_SPECIFIC_DISPLAY := true
+DEVICE_SPECIFIC_DISPLAY_PATH := $(TARGET_HALS_PATH)/display
+
+# Media
+USE_DEVICE_SPECIFIC_MEDIA := true
+DEVICE_SPECIFIC_MEDIA_PATH := $(TARGET_HALS_PATH)/media
 
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/proc/tp_gesture"
