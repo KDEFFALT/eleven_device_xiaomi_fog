@@ -24,10 +24,8 @@ git clone https://github.com/KDEFFALT/vendor_xiaomi_fog -b eleven vendor/xiaomi/
 # Proton clang
 git clone --depth=1 https://github.com/kdrag0n/proton-clang prebuilts/clang/host/linux-x86/clang-proton
 
-# Vanillaify
-sudo rm -rf vendor/google/gms
-sudo rm -rf vendor/google/pixel
-sudo rm -rf vendor/xdroid
-git clone https://github.com/KDEFFALT/xd_vendor_xdroid -b eleven vendor/xdroid
+# Lawnchair
+sudo rm -rf vendor/lawnchair
+git clone https://github.com/KDEFFALT/android_vendor_lawnchair -b eleven vendor/lawnchair
 
 echo -e "${color}Finished sync!${end}"
