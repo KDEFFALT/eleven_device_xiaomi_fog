@@ -13,7 +13,7 @@ rm -rf hardware/google/pixel/kernel_headers/Android.bp
 rm -rf hardware/xiaomi/megvii
 
 # Kernel Sources
-git clone https://github.com/KDEFFALT/kernel_xiaomi_fog -b artifact-new kernel/xiaomi/fog
+git clone https://github.com/KDEFFALT/fog-kernel -b hellevator kernel/xiaomi/fog
 
 # Bengal HALs
 git clone https://github.com/KDEFFALT/hardware_qcom-caf_bengal -b eleven hardware/qcom-caf/bengal
