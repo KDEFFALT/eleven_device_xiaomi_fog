@@ -42,7 +42,9 @@ PRODUCT_PACKAGES += \
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
-    com.dsi.ant@1.0.vendor
+    com.dsi.ant@1.0.vendor \
+    antradio_app \
+    libantradio
 
 # API Level
 PRODUCT_SHIPPING_API_LEVEL := 30
